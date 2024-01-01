@@ -45,17 +45,34 @@ export const Banner = () => {
                 backgroundPosition: "center center",
             }}
         >
-            <div className="h-[190px] pt-[140px]">
-                <h1 className="text-4xl font-bold text-white pb-1">
+            <div className="h-[190px] pt-[140px] ml-8">
+                <h1 className="text-4xl font-bold text-white pb-3">
                     {movie?.title|| movie?.name||movie?.original_name}
                 </h1>
                 <div>
-                    <button className="bg-zinc-400 text-zinc-100 mx-4 px-8 mr-4 border-none">Play</button>
-                    <button className="bg-zinc-400 text-zinc-100 mx-4 px-8 mr-4 border-none">MyList</button>
+                    <button
+                        className="bg-zinc-400 text-zinc-100 mx-4 px-8 py-2 mr-4 border-none bg-opacity-50 rounded-md
+                        hover:bg-[#e6e6e6] hover:text-[#000] transition-all duration-200"
+                    >
+                        Play
+                    </button>
+                    <button
+                        className="bg-zinc-400 text-zinc-100 mx-4 px-8 py-2 mr-4 border-none bg-opacity-50 rounded-md
+                        hover:bg-[#e6e6e6] hover:text-[#000] transition-all duration-200"
+                    >
+                        My List
+                    </button>
                 </div>
-                <h1 className="text-white pt-4">
+                <h1 className="text-white pt-4 max-w-96 h-20 w-[45rem]">
                     {truncate(movie?.overview, 150)}
                 </h1>
+            </div>
+
+            {/* <div className="bg-gradient-to-t h-[7.4rem]"
+            >
+
+            </div> */}
+            <div className="h-28 bg-gradient-to-t from-transparent via-[rgba(37,37,37,0.61)] to-#111">
             </div>
         </header>
     )
